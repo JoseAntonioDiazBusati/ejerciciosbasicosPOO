@@ -14,7 +14,25 @@
  * Mostrar el nombre, peso y altura de la persona 2.
  * Actualizar imc de la persona3 haciendo el cálculo con su peso y altura.
  */
-
+class Persona(peso:Double, altura:Double){
+    var nombre:String = ""
+    var altura:Double = 0.0
+    var peso:Double = 0.0
+    var imc:Double = 0.0
+    init {
+        this.imc = peso / (altura * altura)
+    }
+    constructor(nombre:String,peso: Double,altura: Double):this(altura = altura, peso = peso){
+        this.nombre = nombre
+        this.altura = altura
+        this.peso = peso
+    }
+}
+fun ejercicio1(){
+    val persona1 = Persona(nombre = "Pakote", peso = 80.5, altura = 1.79)
+    println("${persona1.nombre} de ${persona1.altura}m y de ${persona1.peso}kg con un imc de ${"%.2f".format(persona1.imc)}")
+    //val persona2 = Persona(nombre = "Peter", peso = 69.69, altura = 1.76)
+}
 /**
  * Ejercicio 4.2
  *
@@ -81,5 +99,6 @@
  * En el programa principal, debe solicitar por teclado hora, minuto y segundo de forma que se puedan omitir los segundos o los minutos (y segundos, claro) e instancie la clase Tiempo mostrando su valor.
  */
 fun main(){
-    println("JijiJa")
+    println("----------*******Ejercicio 4.1*******---------")
+    ejercicio1()
 }
