@@ -31,7 +31,12 @@ class Persona(peso:Double, altura:Double){
 fun ejercicio1(){
     val persona1 = Persona(nombre = "Pakote", peso = 80.5, altura = 1.79)
     println("${persona1.nombre} de ${persona1.altura}m y de ${persona1.peso}kg con un imc de ${"%.2f".format(persona1.imc)}")
-    //val persona2 = Persona(nombre = "Peter", peso = 69.69, altura = 1.76)
+
+    val persona2 = Persona(nombre = "Peter", peso = 69.69, altura = 1.86)
+    println("${persona2.nombre} de ${persona2.altura}m y de ${persona2.peso}kg con un imc de ${"%.2f".format(persona2.imc)}")
+
+    val persona3 = Persona(nombre = "Julio", peso = 10.69, altura = 1.46)
+    println("${persona3.nombre} de ${persona3.altura}m y de ${persona3.peso}kg con un imc de ${"%.2f".format(persona3.imc)}")
 }
 /**
  * Ejercicio 4.2
