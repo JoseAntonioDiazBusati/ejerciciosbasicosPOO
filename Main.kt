@@ -82,22 +82,26 @@ fun ejercicio2(){}
  *
  * En el programa principal, crear varios rectángulos. Mostarlos y mostrar por pantalla sus áreas y perímetros.
  */
-class Rectangulo(base:Double,altura: Double){
-    var base:Double = 0.0
-        get() = field
-        set(value){
-
-        }
-    var altura:Double = 0.0
-    var area:Double = 0.0
-    var perimetro:Double = 0.0
-    init {
-        area = (base * altura)
-        perimetro = (base * 2) + (altura * 2)
-    }
-
+fun ejercicio3() {
+    val rectangulo1 = Rectangulo(14.76, 73.03)
+    println("Este rectangulo tiene ${rectangulo1.base}cm de base y ${rectangulo1.altura}cm de altura, cuya area es de ${"%.2f".format(rectangulo1.area)}cm y su perimetro es de ${"%.2f".format(rectangulo1.perimetro)}cm.")
+    comprobarRectangulo()
+    val rectangulo2 = Rectangulo(134.76, 373.03)
+    println("Este rectangulo tiene ${rectangulo2.base}cm de base y ${rectangulo2.altura}cm de altura, cuya area es de ${"%.2f".format(rectangulo2.area)}cm y su perimetro es de ${"%.2f".format(rectangulo2.perimetro)}cm.")
+    comprobarRectangulo()
+    val rectangulo3 = Rectangulo(914.76, 723.03)
+    println("Este rectangulo tiene ${rectangulo3.base}cm de base y ${rectangulo3.altura}cm de altura, cuya area es de ${"%.2f".format(rectangulo3.area)}cm y su perimetro es de ${"%.2f".format(rectangulo3.perimetro)}cm.")
+    comprobarRectangulo()
 }
-fun ejercicio3(){}
+
+fun comprobarRectangulo() {
+    try {
+        val rect = Rectangulo(0.0, 0.0)
+    } catch (e: IllegalArgumentException) {
+        println(e.message)
+    }
+}
+
 /**
  *Ejercicio 4.4
  *
@@ -137,9 +141,9 @@ fun ejercicio3(){}
  */
 fun main(){
     println("----------*******Ejercicio 4.1*******---------")
-    ejercicio1()
+    //ejercicio1()
     println("----------*******Ejercicio 4.2*******---------")
-    ejercicio2()
+    //ejercicio2()
     println("----------*******Ejercicio 4.3*******---------")
     ejercicio3()
     println("----------*******Ejercicio 4.4*******---------")
