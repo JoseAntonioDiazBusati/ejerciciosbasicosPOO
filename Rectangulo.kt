@@ -6,7 +6,7 @@ class Rectangulo(val base:Double,val altura: Double) {
         get() = (base * 2) + (altura * 2)
 
     init {
-        require(altura > 0 && base > 0) { "base y altura no puedesn ser <= 0" }
+        require(altura > 0 && base > 0) { "La base y la altura no puede ser menor o igual que 0" }
     }
 
 }
